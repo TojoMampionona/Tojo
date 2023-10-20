@@ -8,7 +8,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 // const Navbar = styled.nav`
 //     padding: 30px;
 //     display: flex;
@@ -38,6 +37,7 @@ function Header() {
                         <Nav.Link href="/" style={listSyle}>Accueil</Nav.Link>
                         <Nav.Link href="/AboutMe" style={listSyle}>A propos de moi</Nav.Link>
                         <Nav.Link href="/MySkills" style={listSyle}>My skills</Nav.Link>
+                        <Nav.Link href="/Jeux" style={listSyle}>Jeux</Nav.Link>
                         <NavDropdown title="Applications" href="/Applications" style={listSyle}>
                             <NavDropdown.Item href="/Applications/Meteo">Météo</NavDropdown.Item>
                             <NavDropdown.Item href="/Applications/TauxDeChange">Taux de change</NavDropdown.Item>

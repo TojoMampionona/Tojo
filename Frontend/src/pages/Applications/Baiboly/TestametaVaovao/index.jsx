@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import Form from 'react-bootstrap/Form';
 import "../../../../App.css";
 
 function TestametaVaovao() {
   const [fileList, setFileList] = useState([]);
   const [selectedFileName, setSelectedFileName] = useState("");
   const [selectedFileContent, setSelectedFileContent] = useState(null);
+  const [selectedKey, setSelectedKey] = useState(null); // État pour suivre le "key" sélectionné
   const { fileName } = useParams();
-
+  
   //Fonction pour Convertir la première lettre d'une chaine de caractèe en majuscul
   function capitalizeFirstLetter(word) {
     return word.charAt(0).toUpperCase() + word.slice(1);
   }
 
-  //Fonction pour Convertir la première lettre d'une chaine de caractèe en majuscule
+  //Fonction pour supprimer l'extension
   function sansExtension(file) {
     const parts = file.split('.');
     if (parts.length > 1) {
@@ -21,6 +23,18 @@ function TestametaVaovao() {
     }
     return parts.join('.');
   }
+
+  //Fonction pour convertisssez les JSON en texte
+  function formatObject(obj) {
+    let formattedString = '';
+    for (const key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        formattedString += `${key}: ${obj[key]}\n`;
+      }
+    }
+    return formattedString;
+  }
+
   //connection au backend pour recuperer la liste des testameta vaovao
   useEffect(() => {
     // Charger la liste des fichiers depuis le backend
@@ -52,11 +66,13 @@ function TestametaVaovao() {
 
   const capitalizedStringFileSelected = capitalizeFirstLetter(sansExtension(selectedFileName));
 
+  const keys = selectedFileContent ? Object.keys(selectedFileContent) : [];
+
   return (
     <div className="row App">
-      <div className="col-2" style={{ backgroundColor: "rgb(255,239,213)" }}>
+      <div className="col-4" style={{ backgroundColor: "rgb(255,239,213)" }}>
         <h3>Testamenta vaovao : </h3>
-        <ul>
+        <ul style= {{ textAlign:'left', marginLeft:'-15px' }}>
           {fileList.map((file, index) => (
             <li key={index}>
               <Link to={`/Applications/Baiboly/TestametaVaovao/${file}`}>
@@ -66,11 +82,30 @@ function TestametaVaovao() {
           ))}
         </ul>
       </div>
-      <div className="col-10">
+      <div className="col-8 ContainerHome" style={{ marginLeft:'-12px' }}>
         {selectedFileContent ? (
           <div>
             <h2>{capitalizedStringFileSelected} : </h2>
-            <pre>{JSON.stringify(selectedFileContent, null, 2)}</pre>
+            <p>Toko faha : </p>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+              <Form.Select onChange={(e) => setSelectedKey(e.target.value)} style={{ width:'150px' }}>
+                <option value="Sélectionner">Sélectionner</option>
+                {keys.map((key) => (
+                  <option key={key} value={key}>
+                    {key}
+                  </option>
+                ))}
+              </Form.Select>
+            </div>
+            {selectedKey ? (
+              <div style={{ whiteSpace: 'pre-wrap', textAlign: 'left' }}>
+                  {formatObject(selectedFileContent[selectedKey])}
+                </div>
+              ) : (
+            <p style={{ textAlign: 'left' }}>
+              Loading...<br />Sélectionner le Toko
+            </p>
+          )}
           </div>
         ) : (
           <p>Veuillez sélectionner svp<br />Loading...</p>

@@ -8,7 +8,6 @@ function Recettes() {
     const [recette, setRecette] = useState([]);
     const [selectedIngredient, setSelectedIngredient] = useState(null);
 
-
     useEffect(() => {
         fetch(`https://api.spoonacular.com/recipes/716429/information?apiKey=a65c9f662cc14764a3ff6132accd2a2c&complexSearch`)
         .then((response) => response.json())
