@@ -311,8 +311,8 @@ return (
         <div style={{ position: 'relative'}}>
               <div style={{position: 'relative'}}>
                 <div style={{margin: '5px', display: 'flex', justifyContent: 'space-between'}}>
-                  <Button className="btn-success" onMouseDown={() => handleButtonDown('left')} onMouseUp={handleButtonUp}>Left</Button>
-                  <Button className="btn-success" onMouseDown={() => handleButtonDown('right')} onMouseUp={handleButtonUp}>Right</Button>
+                  <Button className="btn-success" onTouchStart={() => handleButtonDown('left')} onTouchEnd={handleButtonUp}>Left</Button>
+                  <Button className="btn-success" onTouchStart={() => handleButtonDown('right')} onTouchEnd={handleButtonUp}>Right</Button>
                 </div>
                 <div>
                   <Button className="btn-success" onClick={demarrer}>Demarrer</Button>
