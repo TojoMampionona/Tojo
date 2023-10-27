@@ -69,9 +69,9 @@ function MySkills() {
               <div key={filiere}>
                 <ProgressBar now={progress[filiere]} label={`${filiere} : ${progress[filiere]}%`} style={{height:"20px", margin:"20px", 
               background: 
-              (filiere === 'Illustrator' || filiere === 'Photoshop' || filiere === 'Indesign') ? 'linear-gradient(to right, rgba(0, 0, 4, 1), rgba(0, 0, 9, 0))' :
-              (filiere === 'RéférencementSEO' || filiere === 'FacebookAds') ? 'linear-gradient(to right, rgba(255, 255, 0, 1), rgba(255, 255, 0, 0))' :
-              'linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 0, 0, 0))'
+              (filiere === 'Illustrator' || filiere === 'Photoshop' || filiere === 'Indesign') ? 'linear-gradient(to right, rgba(0, 0, 4, 1), rgba(0, 0, 9, 1))' :
+              (filiere === 'RéférencementSEO' || filiere === 'FacebookAds') ? 'linear-gradient(to right, rgba(255, 255, 0, 1), rgba(255, 255, 0, 1))' :
+              'linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 0, 0, 1))'
               }}/>
               </div>
             ))

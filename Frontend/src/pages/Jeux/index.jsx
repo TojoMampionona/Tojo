@@ -44,8 +44,10 @@ function JeuxAnimation() {
     const handleKeyDown = (e) => {
         if (e.key === 'ArrowRight') {
         animateRight();
+        e.preventDefault();
         } else if (e.key === 'ArrowLeft') {
         animateLeft();
+        e.preventDefault();
         }
     };
     const handleKeyUp = () => {
@@ -106,7 +108,7 @@ function JeuxAnimation() {
         window.removeEventListener('keyup', handleKeyUp);
         cancelAnimationFrame(animationFrameId);
         };
-    }, []);
+    }, [animationFrameId,  handleKeyDown, handleKeyUp]);
 
                     //////////////////////////////////
                     /////////   ANIMATIONS  //////////
@@ -179,7 +181,7 @@ function JeuxAnimation() {
           tl.current = null;
         }
       }
-    }, [isPlaying]);
+    }, [isPlaying, handleKeyUp]);
 
   //Animation Explosion du boom // 
   const explosion = () => {
@@ -256,7 +258,7 @@ const resetDashboard = () => {
 
 return (
 <div className="ContainerHome" style= {{ display:"flex", justifyContent: "center", alignItems:'left' }}>
-    <div style= {{ ...boxstyle, background: 'linear-gradient(to bottom, purple, #8a2be2)', height:'600px', width:'370px' }}>
+    <div className="col-lg-4 col-12" style= {{ ...boxstyle, background: 'linear-gradient(to bottom, purple, #8a2be2)', height:'700px', width:'370px' }}>
         
         <div style={{position: 'relative', justifyContent: "space-between", display: 'flex', backgroundColor: 'rgba(0, 0, 0, 0.6)', height: '30px'}}>
                 <p className="eoh" id="nbrVie" style={{position: 'relative', top:'-10px', left:'15px'}}>Vie: {nbrvie}</p>
@@ -311,7 +313,7 @@ return (
         <div style={{ position: 'relative'}}>
               <div style={{position: 'relative'}}>
                 <div style={{margin: '5px', display: 'flex', justifyContent: 'space-between'}}>
-                  <Button className="btn-success" onTouchStart={() => handleButtonDown('left')} onTouchEnd={handleButtonUp}>Left</Button>
+                    <Button className="btn-success" onTouchStart={() => handleButtonDown('left')} onTouchEnd={handleButtonUp}>Left</Button>
                   <Button className="btn-success" onTouchStart={() => handleButtonDown('right')} onTouchEnd={handleButtonUp}>Right</Button>
                 </div>
                 <div>
@@ -319,6 +321,11 @@ return (
                   <Button className="btn-success" onClick={pause}>{pauseLabel}</Button>
                   <Button className="btn-success" onClick={stop}>Stop</Button>
                 </div>
+              </div>
+              <div style={{margin:'25px', padding:'15px', border:'1px solid white', borderRadius:'10px', lineHeight:'25px'}}>
+                <h4>Instructions :</h4>
+                <p>Le but du jeu est de repousser le maximum de météorites.</p>
+                <p>Utilisez les touches de gauche (⬅️) et de droite (➡️) de votre clavier pour déplacer le bouclier anti-météorites.</p>
               </div>
               
         </div>
