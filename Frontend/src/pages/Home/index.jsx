@@ -82,11 +82,11 @@ function Home() {
       elem,
       {
         opacity: 0,
-        x: 200
+        y: -200
       },
       {
         opacity: 1,
-        x:0,
+        y:0,
         delay: 2,
         scrollTrigger: {
           trigger: elem,
@@ -111,7 +111,7 @@ function Home() {
   return (
     
     <div className="ContainerHome Container circles " style={{borderRadius: '60px 60px 0 0'}}>
-      <div className="row">
+      <div className="row" style={{margin: 'auto'}}>
         {/* <div className="Container"> */}
           <div className="row">
                 <h1 className ="title" ref={titleRef}>
@@ -130,7 +130,7 @@ function Home() {
                 </div>
           </div>
         {/* </div> */}
-        <div className="row mt-5" id="corps">
+        <div className="row mt-5" id="corps" style={{margin:'auto'}}>
             <h2>Mes offres :</h2>
             
             <div className="col-lg-4 col-md-12 col-xs-12 mb-3">
