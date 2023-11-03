@@ -130,8 +130,8 @@ function Home() {
                 </div>
           </div>
         {/* </div> */}
-        <div className="row mt-5" id="corps" style={{margin:'auto', justifyContent: 'center'}}>
-          <div className="col">
+        <div className="row mt-5" id="corps" style={{justifyContent: 'center'}}>
+          
                 <h2>Mes offres :</h2>
                 <div className="col-lg-4 col-md-6 col-xs-8 mb-3">
                   <Card className="h-100">
@@ -183,7 +183,7 @@ function Home() {
                     </Card.Body>
                   </Card>
                 </div>
-          </div>
+          
         </div>
         <div className="row mt-5" id="pieds" >
             <h5>Si l'un de mes services vous intéresse, n'hésitez pas à me contacter en utilisant <Link to="/HiringMe">ce lien</Link> ou sur mes réseaux sociaux.</h5>
