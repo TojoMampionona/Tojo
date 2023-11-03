@@ -133,7 +133,7 @@ function Home() {
         <div className="row mt-5" id="corps" style={{margin:'auto'}}>
             <h2>Mes offres :</h2>
             
-            <div className="col-lg-4 col-md-12 col-xs-12 mb-3">
+            <div className="col-lg-4 col-md-8 col-xs-8 mb-3">
               <Card className="h-100">
                 <Card.Img variant="top" src={Dev} className="card-image"/>
                 <Card.Body className="d-flex flex-column">
@@ -149,7 +149,7 @@ function Home() {
                 </Card.Body>
               </Card>
             </div>
-            <div className="col-lg-4 col-md-12 col-xs-12 mb-3">
+            <div className="col-lg-4 col-md-8 col-xs-8 mb-3">
               <Card className="h-100">
                 <Card.Img variant="top" src={Ref} className="card-image"/>
                 <Card.Body className="d-flex flex-column">
@@ -166,7 +166,7 @@ function Home() {
                 </Card.Body>
               </Card>
             </div>
-            <div className="col-lg-4 col-md-12 col-xs-12 mb-3">
+            <div className="col-lg-4 col-md-8 col-xs-8 mb-3">
               <Card className="h-100">
                 <Card.Img variant="top" src={Graph} className="card-image"/>
                 <Card.Body className="d-flex flex-column">
