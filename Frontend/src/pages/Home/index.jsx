@@ -130,59 +130,60 @@ function Home() {
                 </div>
           </div>
         {/* </div> */}
-        <div className="row mt-5" id="corps" style={{margin:'auto'}}>
-            <h2>Mes offres :</h2>
-            
-            <div className="col-lg-4 col-md-8 col-xs-8 mb-3">
-              <Card className="h-100">
-                <Card.Img variant="top" src={Dev} className="card-image"/>
-                <Card.Body className="d-flex flex-column">
-                  <Card.Title style={{color: '#7d48b2'}}>Développement Web</Card.Title>
-                    <ul style={{display:'contents'}}>
-                      <li>Création de Site Vitrine</li>
-                      <li>Conception de Site Dynamique</li>
-                      <li>Mise en place de site e-commerce</li>
-                      <li>Projets Web Personnalisés</li>
-                    </ul>
-                  <div className="mt-auto">
-                  </div>
-                </Card.Body>
-              </Card>
-            </div>
-            <div className="col-lg-4 col-md-8 col-xs-8 mb-3">
-              <Card className="h-100">
-                <Card.Img variant="top" src={Ref} className="card-image"/>
-                <Card.Body className="d-flex flex-column">
-                <Card.Title style={{color: '#7d48b2'}}>Référencement Web/Réseaux Sociaux</Card.Title>
-                    <ul style={{display:'contents'}}>
-                      <li>Optimisation Technique de votre site</li>
-                      <li>Intégration d'outils de suivi de performance comme Google Analytics, Google Search Console, Facebook Pixels,...</li>
-                      <li style={{listStyle: 'none', borderTop: '1px solid #000', margin: '5px 0'}}></li>
-                      <li>Lancement des campagnes publicitaire Facebook Ads, Google Ads,Instagram Ads, ...</li>
-                      <li>Créations de visuels pour réseaux sociaux</li>
-                    </ul>
-                  <div className="mt-auto">
-                  </div>
-                </Card.Body>
-              </Card>
-            </div>
-            <div className="col-lg-4 col-md-8 col-xs-8 mb-3">
-              <Card className="h-100">
-                <Card.Img variant="top" src={Graph} className="card-image"/>
-                <Card.Body className="d-flex flex-column">
-                <Card.Title style={{color: '#7d48b2'}}>Graphic Design</Card.Title>
-                    <ul style={{display:'contents'}}>
-                      <li>Design Web</li>
-                      <li>Conception d'Identité visuelle</li>
-                      <li>Création de Logo</li>
-                      <li>Elaboration de Charte Graphique</li>
-                      <li>Réalisations de Projets de Design Sur Mesure</li>
-                    </ul>
-                  <div className="mt-auto">
-                  </div>
-                </Card.Body>
-              </Card>
-            </div>
+        <div className="row mt-5" id="corps" style={{margin:'auto', justifyContent: 'center'}}>
+          <div className="col">
+                <h2>Mes offres :</h2>
+                <div className="col-lg-4 col-md-6 col-xs-8 mb-3">
+                  <Card className="h-100">
+                    <Card.Img variant="top" src={Dev} className="card-image"/>
+                    <Card.Body className="d-flex flex-column">
+                      <Card.Title style={{color: '#7d48b2'}}>Développement Web</Card.Title>
+                        <ul style={{display:'contents'}}>
+                          <li>Création de Site Vitrine</li>
+                          <li>Conception de Site Dynamique</li>
+                          <li>Mise en place de site e-commerce</li>
+                          <li>Projets Web Personnalisés</li>
+                        </ul>
+                      <div className="mt-auto">
+                      </div>
+                    </Card.Body>
+                  </Card>
+                </div>
+                <div className="col-lg-4 col-md-6 col-xs-8 mb-3">
+                  <Card className="h-100">
+                    <Card.Img variant="top" src={Ref} className="card-image"/>
+                    <Card.Body className="d-flex flex-column">
+                    <Card.Title style={{color: '#7d48b2'}}>Référencement Web/Réseaux Sociaux</Card.Title>
+                        <ul style={{display:'contents'}}>
+                          <li>Optimisation Technique de votre site</li>
+                          <li>Intégration d'outils de suivi de performance comme Google Analytics, Google Search Console, Facebook Pixels,...</li>
+                          <li style={{listStyle: 'none', borderTop: '1px solid #000', margin: '5px 0'}}></li>
+                          <li>Lancement des campagnes publicitaire Facebook Ads, Google Ads,Instagram Ads, ...</li>
+                          <li>Créations de visuels pour réseaux sociaux</li>
+                        </ul>
+                      <div className="mt-auto">
+                      </div>
+                    </Card.Body>
+                  </Card>
+                </div>
+                <div className="col-lg-4 col-md-6 col-xs-8 mb-3">
+                  <Card className="h-100">
+                    <Card.Img variant="top" src={Graph} className="card-image"/>
+                    <Card.Body className="d-flex flex-column">
+                    <Card.Title style={{color: '#7d48b2'}}>Graphic Design</Card.Title>
+                        <ul style={{display:'contents'}}>
+                          <li>Design Web</li>
+                          <li>Conception d'Identité visuelle</li>
+                          <li>Création de Logo</li>
+                          <li>Elaboration de Charte Graphique</li>
+                          <li>Réalisations de Projets de Design Sur Mesure</li>
+                        </ul>
+                      <div className="mt-auto">
+                      </div>
+                    </Card.Body>
+                  </Card>
+                </div>
+          </div>
         </div>
         <div className="row mt-5" id="pieds" >
             <h5>Si l'un de mes services vous intéresse, n'hésitez pas à me contacter en utilisant <Link to="/HiringMe">ce lien</Link> ou sur mes réseaux sociaux.</h5>
