@@ -1,0 +1,11 @@
+footer {
+    height: 100px;
+    color: white;
+    background-color: #1A1A1A;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Righteous';
+}

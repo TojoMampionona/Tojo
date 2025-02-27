@@ -1,0 +1,40 @@
+.ContainerHome
+  {
+    background: linear-gradient(120deg, rgba(195, 85, 250, 1) 0%, rgba(90, 40, 150, 1) 40%, rgba(170, 80, 220, 1) 100%);
+    text-align: center;
+    color: white;
+    line-height:50px;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } 
+  .title {
+    margin:0;
+  }
+  .letter {
+    color: #FFDD44;
+  }
+  .welcome p {
+    font-family: 'Righteous', sans-serif;
+  }
+  /* .welcome span {
+    font-family: 'Luckiest Guy', sans-serif;
+  } */
+  .menu {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 15px rgba(150, 50, 200, 0.6);
+    width: 25%;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid rgba(255, 221, 68, 0.8);
+}
+@media(max-width:767px){
+  .menu {
+    width:75%
+  }
+}
+  .menu a {
+    border-radius: 10px;
+  }

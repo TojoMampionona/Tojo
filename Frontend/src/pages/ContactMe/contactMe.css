@@ -1,0 +1,67 @@
+.ContainerForm {
+    font-family: 'Rightouse', sans-serif;
+    background: linear-gradient(120deg, rgba(195, 85, 250, 1) 0%, rgba(90, 40, 150, 1) 40%, rgba(170, 80, 220, 1) 100%);
+    text-align: center;
+    color: white;
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:20px
+}
+.ContainerForm .App-logo {
+    height: 150px;
+}
+.ContainerForm form {
+    padding: 20px;
+    border: 1px solid #A9A9A9;
+    border-radius: 20px;
+    font-family: 'Righteous';
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    min-width: 300px;
+}
+.ContainerForm form div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.ContainerForm input {
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #A9A9A9;
+    outline: none;
+    width: -webkit-fill-available;
+    background-color: #D3D3D3;
+    text-indent: 10px;
+}
+.ContainerForm textarea {
+    border-radius: 10px;
+    border: 1px solid #A9A9A9;
+    outline: none;
+    width: -webkit-fill-available;
+    min-height: 100px;
+    background-color: #D3D3D3;
+    text-indent: 10px;
+}
+.ContainerForm input::placeholder, .ContainerForm textarea::placeholder {
+    color: #A9A9A9;
+    font-family: 'Rightouse', sans-serif;
+}
+.ContainerForm button {
+    font-size: 16px;
+    font-family: inherit;
+    padding: 10px 0;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(255, 80, 35);
+    color: white;
+    transition: all 0.5s ease;
+}
+button:hover {
+    background-color: #FFDD44;
+}

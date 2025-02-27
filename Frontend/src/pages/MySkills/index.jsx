@@ -1,7 +1,7 @@
 import "../../App.css"
 import React, { useState, useEffect} from 'react'
-import ProgressBar  from 'react-bootstrap/ProgressBar';
-import Button from 'react-bootstrap/Button'
+//import ProgressBar  from 'react-bootstrap/ProgressBar';
+//import Button from 'react-bootstrap/Button'
 
 function MySkills() {
   //Mes skills et niveaux
@@ -61,18 +61,18 @@ function MySkills() {
   return (
     <div className="ContainerHome">
       <h1>Mes skills</h1>
-      <Button onClick={handleStartButtonClick}>En savoir plus</Button><br />
+      <button onClick={handleStartButtonClick}>En savoir plus</button><br />
       <div>
         {isActive ?
           (
             Object.keys(niveaux).map((filiere) => (
               <div key={filiere}>
-                <ProgressBar now={progress[filiere]} label={`${filiere} : ${progress[filiere]}%`} style={{height:"20px", margin:"20px", 
+                {/* <ProgressBar now={progress[filiere]} label={`${filiere} : ${progress[filiere]}%`} style={{height:"20px", margin:"20px", 
               background: 
               (filiere === 'Illustrator' || filiere === 'Photoshop' || filiere === 'Indesign') ? 'linear-gradient(to right, rgba(0, 0, 4, 1), rgba(0, 0, 9, 1))' :
               (filiere === 'RéférencementSEO' || filiere === 'FacebookAds') ? 'linear-gradient(to right, rgba(255, 255, 0, 1), rgba(255, 255, 0, 1))' :
               'linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 0, 0, 1))'
-              }}/>
+              }}/> */}
               </div>
             ))
           ) 

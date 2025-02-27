@@ -1,0 +1,113 @@
+        /*Global du game*/
+.container-game { 
+    display:flex;
+    justify-content: center;
+    font-family: 'Righteous';
+}
+
+        /*Top*/
+.container-top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 30px;
+}
+.paragrah-top{
+    margin: 0 15px;
+}
+
+        /*Screen*/
+.content { 
+    background: linear-gradient(to bottom, purple, #8a2be2);
+    width: 370px;
+}
+.container-screen {
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 315px;
+    position: relative;
+}
+
+        /*SVG*/
+/* Meteor */
+.meteor {
+    height: 35px;
+    opacity:1
+}
+/*Desctructeur*/
+.destroyer {
+    height:75px;
+    transform: translateY(198px)
+}
+/*Boom*/
+.boom {
+    position: relative;
+    opacity:0;
+    top: 115px
+}
+
+
+
+        /*Commande*/
+.container-btn {
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.btn {
+    outline:none;
+}
+.btn-dmr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    background-color: #ffdd44;
+    border: none;
+    font-family: 'Righteous';
+    font-size: 18px;
+    color: rgba(255, 80, 35);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(255, 80, 35, 0.3); 
+    border: 1px solid rgb(255, 80, 35, 0.5);
+}
+button.btn-dmr:hover {
+    transform: scale(1.1) translateX(-50%);
+    transition: all 0.3s ease-in-out;
+    background-color: rgba(255, 80, 35);
+    color: white;
+}
+.btn-cmd {
+    padding:0;
+    height:44px;
+    border-radius:50px;
+    border: 1px solid rgb(255, 80, 35, 0.5);
+    box-shadow: 0 0 10px rgba(255, 80, 35, 0.5);
+}
+.btn-cmd svg {
+    color: #ffdd44; /* Couleur au survol */
+    transition: color 0.3s ease;
+}
+.btn-cmd:hover svg {
+    color: rgb(255, 80, 35); /* Couleur au survol */
+    transition: all 0.3s ease;
+}
+.btn-cmd:hover { /* Couleur au survol */
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
+
+        /*Insctruction*/
+.container-instruction {
+    font-family: 'Righteous';
+    margin:25px;
+    padding:15px;
+    border:1px solid white;
+    border-radius: 10px;
+    line-height:25px
+}
+.container-instruction h4 {
+    text-decoration: underline;
+}
